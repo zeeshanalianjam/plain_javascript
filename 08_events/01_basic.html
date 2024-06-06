@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basicEvents</title>
+    <style>
+        .item{
+            width: 100px;
+            height: 100px;  
+            background-color: greenyellow;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading" id="head">This is my Heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, temporibus!</p>
+        <ul id="myList">
+            <!-- <li><div class="item" onclick="alert('hello you can clicked')">Pakistan</div></li> -->
+            <li><div class="item" id="pak">Pakistan</div></li>
+            <li><div class="item" id="iran">Iran</div></li>
+            <li><div class="item" id="ire">Ireland</div></li>
+            <li><div class="item" id="jap">Japan</div></li>
+            <li><div class="item" id="swi">Switzerland</div></li>
+        </ul>
+        <a style="font-size: 20px; color: blueviolet;"  href="https://www.google.com/">Google.com</a>
+    </div>
+</body>
+<script>
+// const pak = document.getElementById('pak').onclick(alert('heloe'))
+// const parent = document.querySelector('#myList').addEventListener('click' , (e)=>{
+//     console.log("i am inside the click with parent");
+// } , true)
+// const pak = document.getElementById('pak').addEventListener('click' , (e)=>{
+//     // console.log(e.target);
+//     console.log("i am pak");
+// } , true)
+
+
+
+// const parent = document.querySelector('#myList').addEventListener('click' , (e)=>{
+//     console.log("i am inside the click with parent");
+// } , false)
+// const pak = document.getElementById('pak').addEventListener('click' , (e)=>{
+//     // console.log(e.target);
+//     e.stopPropagation();
+//     console.log("i am pak");
+    
+// } , false)
+
+
+document.querySelector('a').addEventListener('click' ,(e) => {
+    e.preventDefault()
+    console.log(e.timeStamp);
+})
+
+document.querySelector('#myList').addEventListener('click' , (e)=>{
+    console.log(e.target.children)
+    if(e.target.tagName === 'DIV'){
+        e.target.parentNode.remove()
+    }
+})
+
+
+</script>
+</html>

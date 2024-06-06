@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <title>GN-Game</title>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="container">
+        <!-- heading and heading content -->
+        <h2>Welcome to GN-Game (Guess Number Game)</h2>
+        <p class="headerContent">Try and guess a random number between 1 and 100.</p>
+        <p class="headerContent">You have 10 attempts to guess the right number.</p>
+        <br>
+        <hr width="420">
+        <br>
+        <!-- form submiting -->
+        <form>
+            <h1>Guess A Number</h1>
+            <input type="text" id="userInput">
+            <input type="submit" value="Submit Guess" id="btnSub">
+        </form>
+        <!-- result paras -->
+        <div class="resultPara">
+            <p class="itemPara">Previous Gusses : <span class="prevGuesses"></span></p>
+            <p class="itemPara">Remaining Gusses : <span class="remainGuesses">10</span></p>
+            <p class="lowOrHigh"></p>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

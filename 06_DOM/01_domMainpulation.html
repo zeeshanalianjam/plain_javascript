@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading" id="title">JavaScript DOM <span style="display: none;"> (Document Object Model) </span></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae provident est neque ipsa amet blanditiis error! Illum facere beatae provident.</p>
+        
+        <ul class="myUl">
+            <li class="item">One</li>
+            <li class="item">Two</li>
+            <li class="item">Three</li>
+            <li class="item">Four</li>
+        </ul>
+        <form action="">
+            <input type="password" name="" id="" autocomplete="on">
+        </form>
+        
+    </div>
+</body>
+<script>
+    const myUl = document.querySelector('.myUl')
+    // let child =  myUl.childNodes[1].className
+    // child = myUl.children[0].innerText = "fix"
+    // child = myUl.children[0].style.backgroundColor = 'red'
+    // console.log(child);
+
+    const myItem = document.querySelectorAll('.item')
+    // console.log(myItem[0].nextSibling);
+    // console.log(myItem[0].nextElementSibling.nextElementSibling.nextElementSibling.innerText);
+
+    const myLi = document.createElement('li')
+    myLi.id = Math.round(Math.random() * 10 + 1)
+    myLi.className = 'creaedItem';
+    myLi.innerHTML = "Five";
+    console.log(myLi);
+    myUl.appendChild(myLi)
+</script>
+</html>

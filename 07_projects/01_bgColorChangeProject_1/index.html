@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+       .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        
+        
+       }
+       .bgColor{
+        border: 2px solid red;
+        display: flex;
+       }
+       .bgChange{
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        cursor: pointer;
+       }
+
+       #blue{
+        background-color: blue;
+       }
+       #green{
+        background-color: green;
+       }
+       #red{
+        background-color: red;
+       }
+       #orange{
+        background-color: orange;
+       }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Project - 1</h1>
+    <div class="bgColor">
+        <p class="bgChange" id="blue"></p>
+        <p class="bgChange" id="green"></p>
+        <p class="bgChange" id="red"></p>
+        <p class="bgChange" id="orange"></p>
+    </div>
+</div>   
+
+<script src="script.js"></script>
+</body>
+
+</html>

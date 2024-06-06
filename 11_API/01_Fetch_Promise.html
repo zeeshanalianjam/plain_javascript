@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <button id="btnFacts">Get Facts</button>
+    <p id="textData"></p>
+</body>
+    <script>
+        const URL = "https://cat-fact.herokuapp.com/facts";
+        // const promise = fetch(URL)
+        // console.log(promise);
+
+        const getFacts = async ()=>{
+            const response = await fetch(URL);
+            const data = await response.json();
+            console.log(data);
+            const fact = data[2].text;
+            console.log(fact);
+            document.getElementById('textData').innerHTML = fact;
+        }
+        const btnFacts = document.querySelector('#btnFacts')
+        btnFacts.addEventListener('click' , getFacts)
+    </script>
+</html>

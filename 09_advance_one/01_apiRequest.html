@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0.801); color: white;">
+    <h2>Api Request</h2>
+    <form>
+        <label for="following">Following : </label>
+        <input type="checkbox" name="following" id="following">
+    </form>
+    <button>Access Data</button>
+    <div class="container">
+    </div>
+
+    <script>
+        const cont = document.querySelector('.container');
+        console.log(cont.children[1]);
+        const btn = document.querySelector('button');
+        const folowingCheck = document.querySelector('input')
+
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+        const xhr = new XMLHttpRequest();
+        console.log(xhr.readyState);
+        xhr.open('GET', requestUrl);
+        xhr.onreadystatechange = () => {
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(xhr.responseText);
+                console.log(data);
+                console.log(data.followers);
+                console.log(data.avatar_url);
+                btn.addEventListener('click', (e) => {
+
+                    if (folowingCheck.checked === true) {
+                        cont.innerHTML = ` <h3>${data.following} </h3>`;
+
+                    } else {
+
+                        cont.innerHTML = `<img src="${data.avatar_url}" alt="">
+                                            <h3>${data.followers} </h3>`;
+                    }
+
+                }, false)
+
+
+            }
+
+        }
+        console.log(xhr.readyState);
+        xhr.send()
+    </script>
+</body>
+
+</html>

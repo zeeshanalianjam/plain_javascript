@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+span{
+    margin: 20px;
+    box-shadow: 0.2px 0.2px 5px #714f4f;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+span:hover{
+    font-size: 15.5px;
+    box-shadow: 0.2px 0.2px 5px #6d2121;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+form{
+    text-align: center;
+}
+
+form #result , form #weightGuide{
+    text-align: left;
+}
+p{
+    margin-top: 20px;
+    font-size: 17px;
+    letter-spacing: -0.2px;
+}
+h2 , h3{
+    margin: 20px;
+    margin-bottom: 14px;
+}
+input{
+    width: 200px;
+    padding: 5px;
+    font-size: 17px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0.2px 0.2px 5px #714f4f;
+
+    border: none;
+}
+#result , #weightGuide{
+    border-bottom: 1px solid black;
+}
+button{
+    margin: 20px;
+    padding: 10px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0.2px 0.2px 5px #714f4f;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0.2px 0.2px 5px #b17d7d;
+    background-color:  #d6c5c5;
+
+}
+
+

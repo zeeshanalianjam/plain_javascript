@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Javascript Series</h1>
+    <button id="btn">Stop Now</button>
+
+    <script>
+const simpleHello = setTimeout(()=> console.log("hello") , 3000);
+
+// clearTimeout(simpleHello)
+
+document.querySelector('#btn').addEventListener('click' , (e)=>{
+    console.log('i am clicked');
+    clearTimeout(changeHeading);
+})
+
+
+const changeHeading =  setTimeout(() => {
+    document.querySelector('h1').innerHTML = "Best for JS"
+}, 4000);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

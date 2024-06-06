@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Click Now</button>
+
+    <script>
+        class React{
+            constructor(){
+                this.library = 'React Library';
+                this.server = 'https://lcoalhost:3000';
+
+
+                // Requirment for button click to bind method to show handledServer in console.
+                document.querySelector('button').addEventListener('click' , this.handledServer.bind(this))
+            }
+            
+
+            handledServer(){
+                console.log('i am clicked!');
+                console.log(this.server);
+            }
+        }
+
+        const myReact = new React();
+        // myReact.handledServer();
+    </script>
+</body>
+</html>
